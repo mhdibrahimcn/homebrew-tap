@@ -15,7 +15,7 @@ class Droploid < Formula
     libexec.install Dir["*"]
     (bin/"droploid").write <<~SH
       #!/bin/bash
-      exec "#{libexec}/node_modules/.bin/electron" "#{libexec}/out/main/index.js" --cli ""
+      exec "#{libexec}/node_modules/.bin/electron" "#{libexec}/out/main/index.js" --cli "$@"
     SH
   end
 
